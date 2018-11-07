@@ -1,0 +1,45 @@
+stages:
+    - build
+    - deploy
+
+variables:
+    TEMP_FILE: temp.txt
+    REPO_FILE: repo.txt
+
+build:
+    stage: build
+    script:
+        - cd > %REPO_FILE%
+        - set /p REPO_DIR=<%REPO_FILE%
+        - del %REPO_FILE%
+        - set SOLUTION=%REPO_DIR%\CPP\LandMapR.sln
+        - cd "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\"
+        - msbuild.exe %SOLUTION% /v:diag /p:Configuration=Release /t:restore
+        - cd %REPO_DIR%
+        - cd CS\LandMapRLibrary
+        - dotnet build -c Release
+        - cd LandMapRLibrary\bin\Release
+        - dir /b /s *.nupkg > %TEMP_FILE%
+        - set /p NUGET_PACKAGE=<%TEMP_FILE%
+        - del %TEMP_FILE%
+
+deploy:
+    stage: deploy
+    only:
+        - master
+    script:
+        - cd > %REPO_FILE%
+        - set /p REPO_DIR=<%REPO_FILE%
+        - del %REPO_FILE%
+        - set SOLUTION=%REPO_DIR%\CPP\LandMapR.sln
+        - cd "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\"
+        - msbuild.exe %SOLUTION% /v:diag /p:Configuration=Release /t:restore
+        - cd %REPO_DIR%
+        - cd CS\LandMapRLibrary
+        - dotnet build -c Release
+        - dotnet pack -o %PACKAGE_DIR% -c Release
+        - cd LandMapRLibrary\bin\Release
+        - dir /b /s *.nupkg > %TEMP_FILE%
+        - set /p NUGET_PACKAGE=<%TEMP_FILE%
+        - del %TEMP_FILE%
+        - dotnet nuget push %NUGET_PACKAGE% -k %NUGET_API_KEY% -s https://api.nuget.org/v3/index.json

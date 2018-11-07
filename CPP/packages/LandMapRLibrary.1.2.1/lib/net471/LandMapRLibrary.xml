@@ -1,0 +1,512 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LandMapRLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:LandMapRLibrary.CsvMaps.Clsm">
+            <summary>
+            A class to represent a row in the '_Condensed_LSM_fuzzy_classes.csv' file. Properties top to bottom are aligned with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CsvMaps.Dem">
+            <summary>
+            A class to represent a row in the 'dem.csv' file. Properties top to bottom are aligned with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CsvMaps.Fill">
+            <summary>
+            A class to represent a row in the 'fill.csv' file. Properties top to bottom are aligned with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CsvMaps.FormAll">
+            <summary>
+            A class to represent a row in the 'form_all.csv' file. Properties top to bottom are aligned  with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CsvMaps.IDem">
+            <summary>
+            A class to represent a row in the 'idem.csv' file. Properties top to bottom are aligned with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CsvMaps.IPit">
+            <summary>
+            A class to represent a row in the 'ipit.csv' file. Properties top to bottom are aligned with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CsvMaps.Len">
+            <summary>
+            A class to represent a row in the 'Len.csv' file. Properties top to bottom are aligned with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CsvMaps.Mold">
+            <summary>
+            A class to represent a row in the 'Mold.csv' file. Properties top to bottom are aligned with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CsvMaps.Pit">
+            <summary>
+            A class to represent a row in the 'pit.csv' file. Properties top to bottom are aligned with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CsvMaps.Pond">
+            <summary>
+            A class to represent a row in the 'pond.csv' file. Properties top to bottom are aligned with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CsvMaps.RelzAll">
+            <summary>
+            A class to represent a row in the 'Relz_all.csv' file. Properties top to bottom are aligned with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CsvMaps.Vold">
+            <summary>
+            A class to represent a row in the 'vold.csv' file. Properties top to bottom are aligned with each row left to right.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.ATTR_IN">
+            <summary>
+            the field name of the column in the source file that contains the input variable to be used to 
+            compute the fuzzy attribute currently being defined
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.CLASS_OUT">
+            <summary>
+            the kind of fuzzy model to use to re-scale the raw input value for each grid cell into a
+            fuzzy likelihood value scaled from 0 to 100. 
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.FILE_IN">
+            <summary>
+            The field File_in tells the program to obtain data for the first 10 attributes 
+            from data stored in the formfile (ID#Form) DBF table and to obtain data to compute
+            the next 7 fuzzy attributes from the relzfile (ID#Relz)
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.F_NAME">
+            <summary>
+            Facet name, different facet classifications
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.LCR">
+            <summary>
+            Level Crest
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.DSH">
+            <summary>
+            Divergent Shoulder
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.UDE">
+            <summary>
+            Upper Depression
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.BSL">
+            <summary>
+            Back-Slope
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.DBS">
+            <summary>
+            Divergent Back-Slope
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.CBS">
+            <summary>
+            Convergent Back-Slope
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.TER">
+            <summary>
+            Mid-Slope Terrace
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.SAD">
+            <summary>
+            Saddle
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.MDE">
+            <summary>
+            Mid-Slope Depression
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.FSL">
+            <summary>
+            Foot-Slope
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.TSL">
+            <summary>
+            Toe-Slope
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.FAN">
+            <summary>
+            Lower-Slope Fan
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.LSM">
+            <summary>
+            Lower Slope Mound
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.LLS">
+            <summary>
+            Level Lower-Slope
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.F_NAME.DEP">
+            <summary>
+            Lower-Slope Depression
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.LandMapR">
+            <summary>
+            The wrapper class used to run LandMapR.
+            </summary>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapR.LoadLibrary(System.String)">
+            <summary>
+            Native method from kernel32.dll to load the selected dll.
+            </summary>
+            <param name="dllToLoad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapR.GetProcAddress(System.IntPtr,System.String)">
+            <summary>
+            Native method to get the function pointer from memory.
+            </summary>
+            <param name="hModule"></param>
+            <param name="procedureName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapR.FreeLibrary(System.IntPtr)">
+            <summary>
+            Native method to free the library.
+            </summary>
+            <param name="hModule"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LandMapRLibrary.LandMapR.LandMapRProcess">
+            <summary>
+            Declare the function delegate for C++ with matching parameters. Slightly modified in the C# wrapper to be have more developer friendly variable names in C#.
+            </summary>
+            <param name="workingDirectory"></param>
+            <param name="demData"></param>
+            <param name="xllcorner"></param>
+            <param name="yllcorner"></param>
+            <param name="fileName"></param>
+            <param name="nrows"></param>
+            <param name="ncolumns"></param>
+            <param name="gridSize"></param>
+            <param name="missingDataValue"></param>
+            <param name="pitArea"></param>
+            <param name="pitDepth"></param>
+            <param name="pbInvertedElev"></param>
+            <param name="dDSArea"></param>
+            <param name="dUpslopeArea"></param>
+            <param name="fuzzyAttributeFile"></param>
+            <param name="fuzzyFacetsFile"></param>
+        </member>
+        <member name="F:LandMapRLibrary.LandMapR._options">
+            <summary>
+            The options for LandMapR.
+            </summary>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapR.#ctor(LandMapRLibrary.LandMapROptions)">
+            <summary>
+            The constructor with mandatory options parameter.
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapR.Run">
+            <summary>
+            Method to call the LandMapR C++ DLL through C#.
+            </summary>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapR.ProcessCsvData">
+            <summary>
+            For reading elevation data from csv files.
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="T:LandMapRLibrary.LandMapRHelper">
+            <summary>
+            Helper class to read points from the generated csv files into list's of C# classes. No buffered file streams are used so if the file is too large it may error out.
+            </summary>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetCondensedLSMFuzzyClassesPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the '_Condensed_LSM_fuzzy_classes.csv' file from the LandMapRResult and returns a list of Clsm points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetDemPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the 'dem.csv' file from the LandMapRResult and returns a list of Dem points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetFillPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the 'fill.csv' file from the LandMapRResult and returns a list of Fill points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetFormAllPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the 'form_all.csv' file from the LandMapRResult and returns a list of FormAll points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetIDemPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the 'idem.csv' file from the LandMapRResult and returns a list of IDem points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetIPitPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the 'ipit.csv' file from the LandMapRResult and returns a list of IPit points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetLenPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the 'Len.csv' file from the LandMapRResult and returns a list of Len points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetMoldPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the 'mold.csv' file from the LandMapRResult and returns a list of Mold points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetPitPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the 'pit.csv' file from the LandMapRResult and returns a list of Pit points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetPondPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the 'pong.csv' file from the LandMapRResult and returns a list of Pond points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetRelzAllPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the 'Relz_all.csv' file from the LandMapRResult and returns a list of RelzAll points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapRHelper.GetVoldPoints(LandMapRLibrary.LandMapRResult)">
+            <summary>
+            Reads the 'vold.csv' file from the LandMapRResult and returns a list of Vold points.
+            </summary>
+            <param name="landMapRResult"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LandMapRLibrary.LandMapROptions">
+            <summary>
+            LandMapR options object containing necessary paramaters required for C++ DLL.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.OutputDirectory">
+            <summary>
+            Output directory.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.InputFilePath">
+            <summary>
+            The file path to the input data csv.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.XLLCorner">
+            <summary>
+            Lower left x coordinate.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.YLLCorner">
+            <summary>
+            Lower left y coordinate.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.OutputFilePrefix">
+            <summary>
+            Prefix to be prepended to the name of the automatically generated files. Optional.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.Rows">
+            <summary>
+            Number of rows in the grid.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.Columns">
+            <summary>
+            Number of columns in the grid.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.GridSize">
+            <summary>
+            Resolution in meters.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.MissingDataValue">
+            <summary>
+            Value to determine which cells have missing data.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.PitArea">
+            <summary>
+            Threshold values (in meters) for pit areas that are to be removed.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.PitDepth">
+            <summary>
+            Threshold values (in meters) for pit depths that are to be removed.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.InvertedElevation">
+            <summary>
+            Whether elevation data is inverted.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.DownslopeArea">
+            <summary>
+            Threshold value for downslope area.
+            The 300 cell value seems to be particularly suitable when processing relatively high resolution 
+            (5-10 m horizontal grid cells) DEM data for field and farm sized areas (800 m to 1600 m on a side). 
+            For DEM data sets with a very small number of cells (e.g. less than 10,000) it may frequently be necessary
+            to select lower threshold values (100-200 cells) as there are simply not enough cells in the DEM to produce
+            large upslope area counts in the range of 300 or greater.  For very large DEM data sets containing 1 million 
+            cells or more, it has often proven better to select threshold values closer to 1000 cells as lower thresholds
+            can result in recognition of channel networks that are overly detailed and confusing. 
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.UpslopeArea">
+            <summary>
+            Threshold value for upslope area.
+            The 300 cell value seems to be particularly suitable when processing relatively high resolution 
+            (5-10 m horizontal grid cells) DEM data for field and farm sized areas (800 m to 1600 m on a side). 
+            For DEM data sets with a very small number of cells (e.g. less than 10,000) it may frequently be necessary
+            to select lower threshold values (100-200 cells) as there are simply not enough cells in the DEM to produce
+            large upslope area counts in the range of 300 or greater.  For very large DEM data sets containing 1 million 
+            cells or more, it has often proven better to select threshold values closer to 1000 cells as lower thresholds
+            can result in recognition of channel networks that are overly detailed and confusing. 
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.LM3ARules">
+            <summary>
+            Fuzzy attribute file.
+            </summary>
+        </member>
+        <member name="P:LandMapRLibrary.LandMapROptions.LM3CRules">
+            <summary>
+            Fuzzy facet rules.
+            </summary>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapROptions.#ctor(System.String,System.String,System.Double,System.Double,System.Int32,System.Int32,System.Double,System.Int64,System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            Constructor with default fuzzy classification rules.
+            </summary>
+            <param name="outputDirectory">The directory in which the files processed from the C++ DLL will be outputted to.</param>
+            <param name="inputFilePath">The interpolated input elevation file with just the elevation values.</param>
+            <param name="xLLCorner">The lower left x coordinate of the interpolated data set you are inputting. Must be in meters. Lat/Lng not accepted.</param>
+            <param name="yLLCorner">The lower left y coordinate of the interpolated data set you are inputting. Must be in meters. Lat/Lng not accepted.</param>
+            <param name="rows">The number of rows in the interpolated input file.</param>
+            <param name="columns">The number of columns in the interpolated input file.</param>
+            <param name="gridSize">The resoultion in meters.</param>
+            <param name="pitArea">Maximum area of pit to remove. Suggested default value of 10.</param>
+            <param name="pitDepth">Maximum depth of pit to remove. Suggested default value of 0.15.</param>
+            <param name="downslopeArea">Threshold value for downslope area. Suggested default of 300 since it has been found to work well with many kinds of terrain.</param>
+            <param name="upslopeArea">Threshold value for upslope area. Suggested default of 300 since it has been found to work well with many kinds of terrain.</param>
+            <param name="outputFilePrefix">The name to prefix your output files with.</param>
+        </member>
+        <member name="M:LandMapRLibrary.LandMapROptions.#ctor(System.String,System.String,System.Double,System.Double,System.Int32,System.Int32,System.Double,System.Collections.Generic.List{LandMapRLibrary.LM3ARULE},System.Collections.Generic.List{LandMapRLibrary.LM3CRULE},System.Int64,System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            Constructor that allows customized fuzzy classification rules.
+            </summary>
+            <param name="outputDirectory">The directory in which the files processed from the C++ DLL will be outputted to.</param>
+            <param name="inputFilePath">The interpolated input elevation file with just the elevation values.</param>
+            <param name="xllCorner">The lower left x coordinate of the interpolated data set you are inputting. Must be in meters. Lat/Lng not accepted.</param>
+            <param name="yllCorner">The lower left y coordinate of the interpolated data set you are inputting. Must be in meters. Lat/Lng not accepted.</param>
+            <param name="rows">The number of rows in the interpolated input file.</param>
+            <param name="columns">The number of columns in the interpolated input file.</param>
+            <param name="gridSize">The resoultion in meters.</param>
+            <param name="lm3aRules">Custom LM3ARules. If you specify your own we have no idea what will happen. Use at your own discretion.</param>
+            <param name="lm3cRules">Custom LM3CRules. If you specify your own we have no idea what will happen. Use at your own discretion.</param>
+            <param name="pitArea">Maximum area of pit to remove. Suggested default value of 10.</param>
+            <param name="pitDepth">Maximum depth of pit to remove. Suggested default value of 0.15.</param>
+            <param name="downslopeArea">Threshold value for downslope area. Suggested default of 300 since it has been found to work well with many kinds of terrain. See property description for more detailed information.</param>
+            <param name="upslopeArea">Threshold value for upslope area. Suggested default of 300 since it has been found to work well with many kinds of terrain. See property description for more detailed information.</param>
+            <param name="outputFilePrefix">The name to prefix your output files with.</param>
+        </member>
+        <member name="T:LandMapRLibrary.LandMapRResult">
+            <summary>
+            A result classes that contains all the file paths for the files generated.
+            </summary>
+        </member>
+        <member name="T:LandMapRLibrary.LM3ARULE">
+            <summary>
+            fuzzy attribute rules
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.LM3ARULE.Defaults">
+            <summary>
+            Default classification rules.
+            </summary>
+        </member>
+        <member name="M:LandMapRLibrary.LM3ARULE.#ctor(System.Int32,LandMapRLibrary.FILE_IN,LandMapRLibrary.ATTR_IN,LandMapRLibrary.CLASS_OUT,System.Int32,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Constructor for creating a new fuzzy rule record. A list of custom rules can be passed into the LandMapROptions but there is no guarantee that the new rules you set will crash the program.
+            </summary>
+            <param name="sortOrder"></param>
+            <param name="fileIn"></param>
+            <param name="attrIn"></param>
+            <param name="classOut"></param>
+            <param name="modelNo"></param>
+            <param name="b"></param>
+            <param name="bLow"></param>
+            <param name="bHi"></param>
+            <param name="b1"></param>
+            <param name="b2"></param>
+            <param name="d"></param>
+        </member>
+        <member name="T:LandMapRLibrary.LM3CRULE">
+            <summary>
+            Fuzzy facet rules.
+            </summary>
+        </member>
+        <member name="F:LandMapRLibrary.LM3CRULE.Defaults">
+            <summary>
+            List of default fuzzy facet rules.
+            </summary>
+        </member>
+        <member name="M:LandMapRLibrary.LM3CRULE.#ctor(LandMapRLibrary.F_NAME,LandMapRLibrary.CLASS_OUT,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor for new fuzzy facet rules.
+            </summary>
+            <param name="f_Name"></param>
+            <param name="fuzAttr"></param>
+            <param name="attrWT"></param>
+            <param name="facet_No"></param>
+            <param name="f_Code"></param>
+        </member>
+    </members>
+</doc>

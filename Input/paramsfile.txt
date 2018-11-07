@@ -1,0 +1,11 @@
+namePrefix:da1
+ncols:235
+nrows:165
+xllcorner:231323.763
+yllcorner:4356234.603
+GridSize:5
+NODATA_value:-9999.0000
+PitArea:10
+PitDepth:0.15
+dDSArea:300
+dUpslopeArea:300

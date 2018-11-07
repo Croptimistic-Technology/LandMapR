@@ -1,0 +1,10 @@
+C:\CropRecords\Code\landmapr-library-master\CS\LandMapRLibrary\LandMapRLibrary\bin\Debug\netstandard2.0\Dll\LandMapR.dll
+C:\CropRecords\Code\landmapr-library-master\CS\LandMapRLibrary\LandMapRLibrary\bin\Debug\netstandard2.0\LandMapRLibrary.deps.json
+C:\CropRecords\Code\landmapr-library-master\CS\LandMapRLibrary\LandMapRLibrary\bin\Debug\netstandard2.0\LandMapRLibrary.dll
+C:\CropRecords\Code\landmapr-library-master\CS\LandMapRLibrary\LandMapRLibrary\bin\Debug\netstandard2.0\LandMapRLibrary.pdb
+C:\CropRecords\Code\landmapr-library-master\CS\LandMapRLibrary\LandMapRLibrary\obj\Debug\netstandard2.0\LandMapRLibrary.csproj.CoreCompileInputs.cache
+C:\CropRecords\Code\landmapr-library-master\CS\LandMapRLibrary\LandMapRLibrary\obj\Debug\netstandard2.0\LandMapRLibrary.AssemblyInfoInputs.cache
+C:\CropRecords\Code\landmapr-library-master\CS\LandMapRLibrary\LandMapRLibrary\obj\Debug\netstandard2.0\LandMapRLibrary.AssemblyInfo.cs
+C:\CropRecords\Code\landmapr-library-master\CS\LandMapRLibrary\LandMapRLibrary\obj\Debug\netstandard2.0\LandMapRLibrary.dll
+C:\CropRecords\Code\landmapr-library-master\CS\LandMapRLibrary\LandMapRLibrary\obj\Debug\netstandard2.0\LandMapRLibrary.pdb
+C:\CropRecords\Code\landmapr-library-master\CS\LandMapRLibrary\LandMapRLibrary\obj\Debug\netstandard2.0\LandMapRLibrary.csprojAssemblyReference.cache

@@ -1,0 +1,3 @@
+## Ignores all output files except the git ignore.
+*
+!.gitignore
