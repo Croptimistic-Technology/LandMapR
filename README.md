@@ -1,5 +1,10 @@
 # LandMapR
-Forked LandMapRLibrary from Niagara College Research &amp; Innovation
+Forked LandMapRLibrary from Niagara College Research &amp; Innovation. This project comes from http://gitlab.ncinnovation.ca/LandMapr/landmapr-library which you may download from or use the Nuget package 'LandMapRLibrary'. This is forked from the 1.2.1 release and fixes a few issues with the library (out of bounds checks, wrapper pass thrus and updates deprecated code for DLL injection). 
+
+The original license is https://gitlab.ncinnovation.ca/LandMapr/landmapr-library/blob/master/license.txt so this one is the same.
+
+Below is the original README.md, which is otherwise functionally identical to this one.
+
 ## Public NuGet
 
 https://www.nuget.org/packages/LandMapRLibrary/
