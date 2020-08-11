@@ -16,6 +16,7 @@
     <PackageLicenseUrl>https://gitlab.ncinnovation.ca/LandMapr/landmapr-library/blob/master/license.txt</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <FileVersion>1.2.1.0</FileVersion>
+    <PackageId>CropRecordsLandMapRLibrary</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
